@@ -17,11 +17,13 @@ const Routes = () => {
       <ConnectedRouter history={ history }>
         <div>
           <Header />
-          <Route path={ '/' } component={ HomeView } exact />
-          <Route path={ '/about' } component={ AboutView } exact />
-          <Route path={ '/skills' } component={ SkillsView } exact />
-          <Route path={ '/speaking' } component={ SpeakingView } exact />
-          <Route path={ '/contact' } component={ ContactView } exact />
+          <main className={ 'container' }>
+            <Route path={ '/' } component={ HomeView } exact />
+            <Route path={ '/about' } component={ AboutView } exact />
+            <Route path={ '/skills' } component={ SkillsView } exact />
+            <Route path={ '/speaking' } component={ SpeakingView } exact />
+            <Route path={ '/contact' } component={ ContactView } exact />
+          </main>
           <Footer />
         </div>
       </ConnectedRouter>

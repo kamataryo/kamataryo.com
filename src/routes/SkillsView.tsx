@@ -1,12 +1,13 @@
 import * as React from 'react'
 import Meta from '../components/Meta'
+import SkillsContent from '../components/contents/Skills'
 
 const SkillsView = () => {
   return (
-    <div id={ 'skills' }>
+    <div id={ 'skills' } className={ 'skills' }>
 
       <Meta title={ 'Skills' } type={ 'article' } />
-      <p>{ 'This is Skills View.' }</p>
+      <SkillsContent />
     </div>
   )
 }

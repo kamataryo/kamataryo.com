@@ -3,9 +3,9 @@ import Navigation from './Navigation'
 
 const Footer = () => {
   return (
-    <footer id={ 'footer' }>
-      <h2>{ 'footer' }</h2>
-      <Navigation />
+    <footer id={ 'footer' } className={ 'footer' }>
+      <h2 className={ 'footer-title' }>{ 'footer' }</h2>
+      <Navigation prefix={ 'footer' } />
     </footer>
   )
 }

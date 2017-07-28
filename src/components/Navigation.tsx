@@ -1,15 +1,20 @@
 import * as React from 'react'
 import ActiveLink from '../containers/ActiveLink'
 
-const Navigation = () => {
+interface OwnProps {
+  prefix?: string,
+}
+
+const Navigation = (props: OwnProps) => {
+  const navClass = props.prefix ? `navigation navigation-${props.prefix}` : 'navigation'
   return (
-    <nav className={ 'navigation' } role={ 'nav' }>
-      <ul>
-        <li><ActiveLink to={ '/' }>{ 'Home' }</ActiveLink></li>
-        <li><ActiveLink to={ '/about' }>{ 'About' }</ActiveLink></li>
-        <li><ActiveLink to={ '/skills' }>{ 'Skills' }</ActiveLink></li>
-        <li><ActiveLink to={ '/speaking' }>{ 'Speaking' }</ActiveLink></li>
-        <li><ActiveLink to={ '/contact' }>{ 'Contact' }</ActiveLink></li>
+    <nav className={ navClass } role={ 'nav' }>
+      <ul className={ 'nav-items' }>
+        <li className={ 'nav-item' }><ActiveLink to={ '/' }>{ 'Home' }</ActiveLink></li>
+        <li className={ 'nav-item' }><ActiveLink to={ '/about' }>{ 'About' }</ActiveLink></li>
+        <li className={ 'nav-item' }><ActiveLink to={ '/skills' }>{ 'Skills' }</ActiveLink></li>
+        <li className={ 'nav-item' }><ActiveLink to={ '/speaking' }>{ 'Speaking' }</ActiveLink></li>
+        <li className={ 'nav-item' }><ActiveLink to={ '/contact' }>{ 'Contact' }</ActiveLink></li>
       </ul>
     </nav>
   )
