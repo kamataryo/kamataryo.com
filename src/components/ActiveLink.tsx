@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export interface OwnProps {
   to        : string,
   pathname  : string,
-  children  : React.ReactChild
+  children  : React.ReactChild,
 }
 
 const ActiveLink = (props: OwnProps) => {

@@ -1,14 +1,10 @@
 import * as React from 'react'
-
-export const HomeMeta = () => {
-  return (
-    <div>{ 'aa' }</div>
-  )
-}
+import Meta from '../components/Meta'
 
 const HomeView = () => {
   return (
     <div id={ 'home' }>
+      <Meta />
       <p>{ 'This is Home View.' }</p>
     </div>
   )
