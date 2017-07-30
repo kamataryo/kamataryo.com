@@ -1,13 +1,12 @@
 sudo: false
 language: node_js
 node_js:
-  - '8'
+- '8'
 before_script:
-  - "npm run build"
+- npm run build
 script:
-  - "npm run lint"
-  - "npm test"
-after_success:
-  - "openssl aes-256-cbc -K $encrypted_6a659382f6d5_key -iv $encrypted_6a659382f6d5_iv -in .travis_rsa.enc -out $HOME/.ssh/id_rsa -d"
-  - "chmod 600 $HOME/.ssh/id_rsa"
-  - ".bin/travis-deploy.sh"
+- npm run lint
+- npm test
+notifications:
+  webhooks:
+    secure: erGguUFbearpndlzWu/MJllvjZ9aF9vjy55G/mXrPWy/4JlRr2/PMBVxs2xkIyUo2FVyYhJ8BmRJg4Is8TJ0petAbCPh6dOQK7fhoa3DTU485dVAeJ9eV/OEKP6eP2MeXw2vLwdx/fuRmSAWLMMmqX3BHL1b9VHL+at01FI8Ap1DDV+ZgnhS+XCwjUMmsxfPHiitHGyyVB5uO6meq63iL2tFAzKbrB7I/3+u7PhK2qW+/Ejy+oK+qC1MHOXMlPH0scHph7XrOcVgUpVy5LEHWzaGuZ6Xsb8iFk09f8Jt6FYvlp5l6kQLiARncJNXVoqoVoujitlpnhWQcA+VQVr+9JoaFvZbs+yA7S19CaYSBBHRJEUSJVqwiqBLZSv0wrcjtAazuEdexMjo95vpGwhkebWS2kE+3OBxnjFrQqL3Mrf6BAyy7u/k2Cwm3twfo+GoIqaES50Qr3uAw4meRmOSlNimIi99R0J4wrtdKeNlFYNO6BzEbl82kL8QyQKmJY0NsRKygyUkv8YYWrwppTk7RfevxzcdlKstcIbv/aWSxDT13l92hd7oGvW7/AN6guPN9Jykl5VUift+FO2pS9TgJznjRSRl2/ekwZ+rqIAepAy6wzGwG+WfZL5xCHjajBEdz7zbYdP2yUHlcdnX46rncLq/RxHfF+pSmHFBr2vAQZI=

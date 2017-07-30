@@ -15,7 +15,7 @@ describe('Test of ActiveLink container', () => {
     const initialState: any = {
       routing: {
         location: {
-          pathname: '/testpath',
+          pathname : '/testpath',
         },
       },
     }
@@ -28,7 +28,7 @@ describe('Test of ActiveLink container', () => {
     const initialState: any = {
       routing: {
         location: {
-          pathname: '/testpath',
+          pathname : '/testpath',
         },
       },
     }

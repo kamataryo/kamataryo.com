@@ -1,14 +1,14 @@
 import { combineReducers, createStore, applyMiddleware, Reducer } from 'redux'
-import createBrowserHistory from 'history/createBrowserHistory'
+import reateBrowserHistory from 'history/createBrowserHistory'
 import { routerReducer, RouterState, routerMiddleware } from 'react-router-redux'
 
-export const history = createBrowserHistory()
+export const history = reateBrowserHistory()
 const middlewares = [
   routerMiddleware(history),
 ]
 
 export interface RootState {
-  routing  : RouterState,
+  routing : RouterState,
 }
 
 const rootReducer = combineReducers({

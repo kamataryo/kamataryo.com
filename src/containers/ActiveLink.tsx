@@ -3,7 +3,7 @@ import { RootState } from '../store'
 import ActiveLink, { OwnProps } from '../components/ActiveLink'
 
 export interface StateProps {
-  pathname: string,
+  pathname : string,
 }
 interface AntiStateProps {
   pathname? : string,
@@ -13,7 +13,7 @@ interface AntiStateProps {
 const mapStateToProps = (state: RootState): StateProps => {
   const location = state.routing.location
   return ({
-    pathname: location ? location.pathname : '',
+    pathname : location ? location.pathname : '',
   })
 }
 

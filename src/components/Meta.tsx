@@ -8,6 +8,8 @@ interface OwnProps {
   description?   : string,
   url?           : string,
   image?         : string,
+  faviconType?   : string,
+  faviconHref?   : string,
   // fb?            : {
   //   admin?       : string,
   // },
@@ -28,8 +30,10 @@ const Meta = (props: OwnProps) => {
     title       : 'Web Developer',
     type        : 'website',
     site_name   : 'Kamata Ryo',
-    description : 'My portfolio',
-    image       : 'http://example.com/image',
+    description : 'Kamata Ryo\'s My portfolio',
+    image       : 'http://example.com/ogp.png',
+    faviconType : 'image/png',
+    faviconHref: '/icon.png',
     // twitter     : {
     //   site: 'aaa',
     //   card: 'summary',
@@ -52,6 +56,7 @@ const Meta = (props: OwnProps) => {
     //   },
     // },
   }
+
   const {
     title,
     type,
@@ -59,6 +64,8 @@ const Meta = (props: OwnProps) => {
     description,
     url,
     image,
+    faviconType,
+    faviconHref,
     // fb,
     // twitter,
   } = fallbackedProps
@@ -74,6 +81,7 @@ const Meta = (props: OwnProps) => {
       <meta property={ 'og:image' } content={ image } />
       <meta property={ 'og:site_name' } content={ site_name } />
       <meta property={ 'og:description' } content={ description } />
+      <link rel={ 'icon' } type={ faviconType } href={ faviconHref } />
       <title>{ `${site_name} | ${title}` }</title>
     </Helmet>
   )

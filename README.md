@@ -3,7 +3,7 @@
 [![Linux Build Status](https://travis-ci.org/kamataryo/kamataryo.com.svg?branch=master)](https://travis-ci.org/kamataryo/kamataryo.com)
 [![Windows Build status](https://ci.appveyor.com/api/projects/status/hndrdtmd5jim0d7o?svg=true)](https://ci.appveyor.com/project/kamataryo/kamataryo.com)
 
-[Site](https://kamataryo.com)
+[Site](http://kamataryo.com)
 
 This is my profile site.
 

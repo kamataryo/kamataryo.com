@@ -16,7 +16,8 @@
     "ordered-imports": false,
     "quotemark": [true, "single", "avoid-escape", "avoid-template"],
     "semicolon": [true, "never"],
-    "typedef-whitespace": false
+    "typedef-whitespace": false,
+    "jsx-no-multiline-js": false
   },
   "rulesDirectory": []
 }
