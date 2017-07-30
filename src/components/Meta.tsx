@@ -31,7 +31,7 @@ const Meta = (props: OwnProps) => {
     type        : 'website',
     site_name   : 'Kamata Ryo',
     description : 'Kamata Ryo\'s My portfolio',
-    image       : 'http://example.com/ogp.png',
+    image       : 'https://kamataryo.com/ogp.png',
     faviconType : 'image/png',
     faviconHref: '/icon.png',
     // twitter     : {
