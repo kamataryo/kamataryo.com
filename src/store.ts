@@ -1,8 +1,8 @@
 import { combineReducers, createStore, applyMiddleware, Reducer } from 'redux'
-import reateBrowserHistory from 'history/createBrowserHistory'
+import createBrowserHistory from 'history/createBrowserHistory'
 import { routerReducer, RouterState, routerMiddleware } from 'react-router-redux'
 
-export const history = reateBrowserHistory()
+export const history = createBrowserHistory()
 const middlewares = [
   routerMiddleware(history),
 ]

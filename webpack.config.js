@@ -65,7 +65,11 @@ module.exports = {
       template: './src/index.html',
     }),
 
-    new CopyWebpackPlugin([{ from: './assets', to: path.join(__dirname, '/dist') }]),
+    new CopyWebpackPlugin([
+      { from: './assets',     to: path.join(__dirname, '/dist') },
+      { from: './_redirects', to: path.join(__dirname, '/dist') },
+    ]),
+
   ],
 
   devServer: {
