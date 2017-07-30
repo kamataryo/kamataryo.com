@@ -29,8 +29,12 @@ const skills: Skill[] = [
     rate: 4,
   },
   {
-    name: 'WordPress',
+    name: 'WordPress plugin development',
     rate: 4,
+  },
+  {
+    name: 'WordPress theme development',
+    rate: 3,
   },
   {
     name: 'C#',
@@ -41,8 +45,16 @@ const skills: Skill[] = [
     rate: 3,
   },
   {
+    name: 'Python',
+    rate: 3,
+  },
+  {
     name: 'Ruby',
     rate: 2,
+  },
+  {
+    name: 'golang',
+    rate: 1,
   },
 ]
 

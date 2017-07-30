@@ -5,7 +5,7 @@ const AboutContent = () => {
       <div className={ 'content about-content' }>
         <h2 className={ 'page-title' }>{ 'About Me' }</h2>
         <p className={ 'article-content' }>{ `
-          I am web developer.
+          I am a web developer.
           I code mainly using JavaScript, PHP and C# and release some open source projects.
           My main concerns are..
         ` }</p>
