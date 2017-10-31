@@ -1,13 +1,16 @@
 import * as React from 'react'
 import Navigation from './Navigation'
+import { Justify } from '../styled/common'
 
 const Header = () => {
   return (
-    <header className={ 'header' } id={ 'header' }>
-      <h1 className={ 'main-title' }>{ 'Kamata Ryo' }</h1>
-      <p className={ 'sub-title' }>{ 'Web Developer | API Developer | UI Designer | Naturalist' }</p>
-      <Navigation prefix={ 'header' } />
-    </header>
+    <Justify>
+      <header className={ 'header' } id={ 'header' }>
+        <h1 className={ 'main-title' }>{ 'Kamata Ryo' }</h1>
+        <p className={ 'sub-title' }>{ 'Web Developer | API Developer | UI Designer | Naturalist' }</p>
+        <Navigation prefix={ 'header' } />
+      </header>
+    </Justify>
   )
 }
 

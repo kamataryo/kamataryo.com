@@ -10,11 +10,13 @@ import SkillsView from '../routes/SkillsView'
 import SpeakingView from '../routes/SpeakingView'
 import ContactView from '../routes/ContactView'
 import Footer from '../components/Footer'
+import { Justify } from '../styled/common'
 
 const Routes = () => {
   return (
     <Provider store={ rootStore }>
       <ConnectedRouter history={ history }>
+        <Justify>
         <div>
           <Header />
           <main className={ 'container' }>
@@ -25,7 +27,8 @@ const Routes = () => {
             <Route path={ '/contact' } component={ ContactView } exact />
           </main>
           <Footer />
-        </div>
+          </div>
+        </Justify>
       </ConnectedRouter>
     </Provider>
   )
