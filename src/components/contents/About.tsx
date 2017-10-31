@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 
 const AboutContent = () => {
     return (
@@ -7,12 +8,14 @@ const AboutContent = () => {
         <p className={ 'article-content' }>{ `
           I am a web developer.
           I code mainly using JavaScript, PHP and C# and release some open source projects.
-          My main concerns are..
         ` }</p>
+        <p>{ 'My main concerns are..' }</p>
         <ul>
-          <li>{ 'high performance SPA (Single Page Application)' }</li>
+          <li>{ 'High performance SPA (Single Page Application)' }</li>
           <li>{ 'UI & API designing' }</li>
           <li>{ 'development methodology' }</li>
+          <li>{ 'Wild lives' }</li>
+          <li><Link to={ '/cat' }>{ 'Cat' }</Link></li>
         </ul>
       </div>
     )

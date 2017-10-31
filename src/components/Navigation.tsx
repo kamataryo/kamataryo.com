@@ -34,6 +34,8 @@ export default class Navigation extends React.Component<OwnProps, {}> {
             <NavItem className={ 'nav-item' }><ActiveLink to={ '/' }>{ 'Home' }</ActiveLink></NavItem>
             <NavItem className={ 'nav-item' }><ActiveLink to={ '/about' }>{ 'About' }</ActiveLink></NavItem>
             <NavItem className={ 'nav-item' }><ActiveLink to={ '/skills' }>{ 'Skills' }</ActiveLink></NavItem>
+            <NavItem className={ 'nav-item' }><ActiveLink to={ '/publications' }>{ 'Publications' }</ActiveLink></NavItem>
+            <NavItem className={ 'nav-item' }><ActiveLink to={ '/cat' }>{ 'Cat' }</ActiveLink></NavItem>
             { /* <NavItem className={ 'nav-item' }><ActiveLink to={ '/speaking' }>{ 'Speaking' }</ActiveLink></NavItem> */ }
             <NavItem className={ 'nav-item' }><ActiveLink to={ '/contact' }>{ 'Contact' }</ActiveLink></NavItem>
           </NavItems>

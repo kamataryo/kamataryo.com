@@ -4,11 +4,13 @@ import rootStore, { history } from '../store'
 import { Route } from 'react-router'
 import { ConnectedRouter } from 'react-router-redux'
 import Header from '../components/Header'
-import HomeView from '../routes/HomeView'
-import AboutView from '../routes/AboutView'
-import SkillsView from '../routes/SkillsView'
-import SpeakingView from '../routes/SpeakingView'
-import ContactView from '../routes/ContactView'
+import HomeView from './HomeView'
+import AboutView from './AboutView'
+import PublicationsView from './publications-view'
+import SkillsView from './SkillsView'
+import SpeakingView from './SpeakingView'
+import ContactView from './ContactView'
+import CatView from './cat-view'
 import Footer from '../components/Footer'
 import { Justify } from '../styled/common'
 
@@ -24,6 +26,8 @@ const Routes = () => {
             <Route path={ '/about' } component={ AboutView } exact />
             <Route path={ '/skills' } component={ SkillsView } exact />
             <Route path={ '/speaking' } component={ SpeakingView } exact />
+            <Route path={ '/cat' } component={ CatView } exact />
+            <Route path={ '/publications' } component={ PublicationsView } exact />
             <Route path={ '/contact' } component={ ContactView } exact />
           </main>
           <Footer />
