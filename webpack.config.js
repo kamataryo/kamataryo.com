@@ -3,23 +3,24 @@ const webpack           = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
+const __NODE_ENV__ = JSON.stringify(process.env.NODE_ENV) || 'development'
+
+const mainEntry = ['./src/main.tsx']
+
+const devEntries = [
+  // activate HMR for React
+  'react-hot-loader/patch',
+  // bundle the client for webpack-dev-server
+  // and connect to the provided endpoint
+  'webpack-dev-server/client?http://localhost:3000',
+  // bundle the client for hot reloading
+  // only- means to only hot reload for successful updates
+  'webpack/hot/only-dev-server',
+]
+
 module.exports = {
 
-  entry: [
-    'react-hot-loader/patch',
-    // activate HMR for React
-
-    'webpack-dev-server/client?http://localhost:3000',
-    // bundle the client for webpack-dev-server
-    // and connect to the provided endpoint
-
-    'webpack/hot/only-dev-server',
-    // bundle the client for hot reloading
-    // only- means to only hot reload for successful updates
-
-    './src/main.tsx',
-    // the entry point of our app
-  ],
+  entry: __NODE_ENV__ === 'development' ? mainEntry.concat(devEntries) : mainEntry,
 
   output: {
     path: path.join(__dirname, '/dist'),
@@ -27,7 +28,7 @@ module.exports = {
     filename: 'bundle.js'
   },
 
-  devtool: 'source-map',
+  devtool: __NODE_ENV__ === 'development' ? 'source-map' : void 0,
 
   resolve: {
     modules: [
@@ -43,10 +44,6 @@ module.exports = {
         test: /.tsx?$/,
         use: [{ loader: 'ts-loader' }]
       },
-      // {
-      //   test: /\.css$/,
-      //   use: ['style-loader', 'css-loader']
-      // }
     ]
 
   },
