@@ -4,7 +4,7 @@ const ContactContent = () => {
     return (
       <div>
         <h2>{ 'contact' }</h2>
-        <p>
+        <div>
           <ul>
             <li>
               <a href={ 'https://github.com/kamataryo' }>{ 'GitHub' }</a>
@@ -13,7 +13,7 @@ const ContactContent = () => {
               <a href={ 'https://twitter.com/KamataRyo_t' }>{ 'Twitter' }</a>
             </li>
           </ul>
-        </p>
+        </div>
       </div>
     )
 }

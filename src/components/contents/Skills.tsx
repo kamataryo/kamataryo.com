@@ -62,18 +62,18 @@ const SkillsContent = () => {
     return (
       <div className={ 'content skills-content' }>
         <h2 className={ 'page-title' }>{ 'Skills' }</h2>
-        <p className={ 'article-content' }>
+        <div className={ 'article-content' }>
         <ul>
         {
           skills.map((skill: any) => (
-            <li>
+            <li key={ skill.name }>
               <p>{ `${skill.name}: ` }<Rate value={ skill.rate } /></p>
               { skill.content ? <p>{ skill.content }</p> : null }
             </li>
           ))
         }
         </ul>
-        </p>
+        </div>
       </div>
     )
 }
