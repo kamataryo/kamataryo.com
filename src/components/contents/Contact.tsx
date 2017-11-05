@@ -10,7 +10,7 @@ const ContactContent = () => {
               <a href={ 'https://github.com/kamataryo' }>{ 'GitHub' }</a>
             </li>
             <li>
-              <a href={ 'https://twitter.com/KamataRyo_t' }>{ 'Twitter' }</a>
+              <a href={ 'https://twitter.com/kamataryo_' }>{ 'Twitter' }</a>
             </li>
           </ul>
         </div>

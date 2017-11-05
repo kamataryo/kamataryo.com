@@ -8,7 +8,6 @@ import HomeView from './HomeView'
 import AboutView from './AboutView'
 import PublicationsView from './publications-view'
 import SkillsView from './SkillsView'
-import SpeakingView from './SpeakingView'
 import ContactView from './ContactView'
 import CatView from './cat-view'
 import Footer from '../components/Footer'
@@ -25,7 +24,6 @@ const Routes = () => {
             <Route path={ '/' } component={ HomeView } exact />
             <Route path={ '/about' } component={ AboutView } exact />
             <Route path={ '/skills' } component={ SkillsView } exact />
-            <Route path={ '/speaking' } component={ SpeakingView } exact />
             <Route path={ '/cat' } component={ CatView } exact />
             <Route path={ '/publications' } component={ PublicationsView } exact />
             <Route path={ '/contact' } component={ ContactView } exact />
