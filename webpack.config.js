@@ -1,5 +1,5 @@
-const path              = require('path')
-const webpack           = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
@@ -19,22 +19,21 @@ const devEntries = [
 ]
 
 module.exports = {
-
-  entry: __NODE_ENV__ === 'development' ? mainEntry.concat(devEntries) : mainEntry,
+  entry: {
+    app:
+      __NODE_ENV__ === 'development' ? mainEntry.concat(devEntries) : mainEntry,
+  },
 
   output: {
     path: path.join(__dirname, '/dist'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].bundle.js',
   },
 
   devtool: __NODE_ENV__ === 'development' ? 'source-map' : void 0,
 
   resolve: {
-    modules: [
-      path.resolve(__dirname, 'src'),
-      'node_modules',
-    ],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.json'],
   },
 
@@ -44,8 +43,7 @@ module.exports = {
         test: /.tsx?$/,
         use: [{ loader: 'ts-loader' }]
       },
-    ]
-
+    ],
   },
 
   plugins: [
@@ -63,10 +61,9 @@ module.exports = {
     }),
 
     new CopyWebpackPlugin([
-      { from: './assets',     to: path.join(__dirname, '/dist') },
+      { from: './assets', to: path.join(__dirname, '/dist') },
       { from: './_redirects', to: path.join(__dirname, '/dist') },
     ]),
-
   ],
 
   devServer: {
