@@ -58,6 +58,13 @@ const PublicationsContent = () => {
           { 'http://www.gisa-japan.org/news/file/2017_abstract1029_ver.3.pdf' }
         </a>
       </p>
+      <p>
+        { '日本版Map Warperを用いた旧版地形図の公開' }<br />
+        { 'GIS学会 2018年度学術研究発表大会' }<br />
+        <a href={ 'http://www.gisa-japan.org/file/1012_poster.pdf' }>
+          { 'http://www.gisa-japan.org/file/1012_poster.pdf' }
+        </a>
+      </p>
     </div>
   )
 }
